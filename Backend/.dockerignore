@@ -1,0 +1,43 @@
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.override.yml
+
+# Docker volumes
+docker-data/
+
+# Docker logs
+*.log
+
+# Git
+.git
+.gitignore
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+config.json
