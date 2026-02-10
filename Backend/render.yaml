@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: chat-app-backend
+    runtime: java
+    plan: free
+    buildCommand: "./mvnw clean package"
+    startCommand: "java -jar target/chat-app-backend-0.0.1-SNAPSHOT.jar"
+    envVars:
+      - key: JAVA_VERSION
+        value: 21
+      - key: MONGODB_URI
+        fromDatabase:
+          name: chatapp-db
+          property: connectionString
+
+databases:
+  - name: chatapp-db
+    databaseName: chatapp
+    user: chatapp
